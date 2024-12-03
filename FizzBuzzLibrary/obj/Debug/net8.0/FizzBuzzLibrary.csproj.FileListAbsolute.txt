@@ -1,0 +1,11 @@
+/Users/sunny/RiderProjects/Sunithatest/FizzBuzzLibrary/bin/Debug/net8.0/FizzBuzzLibrary.deps.json
+/Users/sunny/RiderProjects/Sunithatest/FizzBuzzLibrary/bin/Debug/net8.0/FizzBuzzLibrary.dll
+/Users/sunny/RiderProjects/Sunithatest/FizzBuzzLibrary/bin/Debug/net8.0/FizzBuzzLibrary.pdb
+/Users/sunny/RiderProjects/Sunithatest/FizzBuzzLibrary/obj/Debug/net8.0/FizzBuzzLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sunny/RiderProjects/Sunithatest/FizzBuzzLibrary/obj/Debug/net8.0/FizzBuzzLibrary.AssemblyInfoInputs.cache
+/Users/sunny/RiderProjects/Sunithatest/FizzBuzzLibrary/obj/Debug/net8.0/FizzBuzzLibrary.AssemblyInfo.cs
+/Users/sunny/RiderProjects/Sunithatest/FizzBuzzLibrary/obj/Debug/net8.0/FizzBuzzLibrary.csproj.CoreCompileInputs.cache
+/Users/sunny/RiderProjects/Sunithatest/FizzBuzzLibrary/obj/Debug/net8.0/FizzBuzzLibrary.dll
+/Users/sunny/RiderProjects/Sunithatest/FizzBuzzLibrary/obj/Debug/net8.0/refint/FizzBuzzLibrary.dll
+/Users/sunny/RiderProjects/Sunithatest/FizzBuzzLibrary/obj/Debug/net8.0/FizzBuzzLibrary.pdb
+/Users/sunny/RiderProjects/Sunithatest/FizzBuzzLibrary/obj/Debug/net8.0/ref/FizzBuzzLibrary.dll
