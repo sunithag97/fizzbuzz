@@ -1,0 +1,52 @@
+trigger:
+  - main 
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  buildConfiguration: 'Release'
+  dotnetVersion: '8.0.x' 
+
+steps:
+  # Install .NET 8 SDK
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: $(dotnetVersion)
+  
+  # Restore dependencies
+  - script: |
+      dotnet restore Sunithatest.sln
+    displayName: 'Restore dependencies'
+  
+  # Build the application
+  - script: |
+      dotnet build Sunithatest.sln --configuration $(buildConfiguration)
+    displayName: 'Build solution'
+  
+  # Run unit tests
+  - script: |
+      dotnet test --no-build --verbosity normal
+    displayName: 'Run tests'
+  
+  # Publish the application
+  - script: |
+      dotnet publish Sunithatest.sln --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/publish
+    displayName: 'Publish application'
+  
+  # Publish build artifacts
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)/publish'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
+  
+  # Deploy application to Azure
+  - task: AzureCLI@2
+    inputs:
+      azureSubscription: '<Azure-Service-Connection>' # Replace with your service connection name
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        # Replace with appropriate deployment commands
+        az webapp deploy --resource-group <Resource-Group-Name> --name <App-Service-Name> --src-path $(Build.ArtifactStagingDirectory)/publish
